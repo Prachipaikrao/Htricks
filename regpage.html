@@ -1,0 +1,170 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url("regimg.jfif");
+  background-color: #cccccc;
+  background-repeat:no-repeat;
+  background-size: cover;
+  height:600px;
+}
+</style>
+
+<script>
+function validate()
+{
+
+if(document.getElementById("name").value=="" )
+{
+alert("Please provide your Name!");
+name.focus();
+return false;
+}
+var al=/^[a-zA-Z ]+$/;
+if(document.getElementById("name").value.match(al))
+{
+
+
+}else
+{
+alert("Please Provide Valid Name");
+name.focus();
+return false;
+}
+
+if(document.getElementById("phone").value=="")
+{
+alert("Please provide your Phone No.!");
+number.focus();
+return false;
+}
+if(document.getElementById("password").value=="")
+{
+alert("Please provide your Password!");
+password.focus();
+return false;
+}
+var a1=/^[a-zA-Z]+$/;
+if(document.getElementById("password").value.match(al))
+{
+
+
+}else
+{
+alert("Password Should be in Characters");
+password.focus();
+return false;
+}
+if(document.getElementById("passwordp").value=="")
+{
+alert("Please conform your Password!");
+passwordp.focus();
+return false;
+}
+if(document.getElementById("password").value==document.getElementById("passwordp").value)
+{
+
+
+}else
+{
+alert("Password Do not Match");
+passwordp.focus();
+return false;
+}
+if(document.getElementById("dob").value=="")
+{
+alert("Please provide your DOB!");
+dob.focus();
+return false;
+}
+if(document.getElementById("phoneno").value=="")
+{
+alert("Please provide your phone no!");
+phoneno.focus();
+return false;
+}
+var a2=/^[0-9]+$/;
+var s=document.getElementById("phoneno").value
+if(document.getElementById("phoneno").value.match(a2) && s.length==10)
+{
+
+
+}else
+{
+alert("Please provide valid Phone no");
+phoneno.focus();
+return false;
+}
+
+if(document.getElementById("year").value=="-1")
+{
+alert("Please provide your Class!");
+year.focus();
+return false;
+}
+if(document.getElementById("department").value=="-1")
+{
+alert("Please provide your Department!");
+department.focus();
+return false;
+}
+
+}
+</script>
+
+    <title>reg</title>
+
+
+
+</head>
+<body><br><br><br>
+<center>
+<fieldset style="height:600px;width:400px;">
+<div class="bg">
+<div >
+
+
+
+<div class="container">
+            <form action=reg.php method="post" onSubmit=return(validate());>
+                <h2 align="center" style="color:white;" ><b>Registration Form</b></h2><br>
+                <div class="form-group">
+                    <h3 style="color:white;"><label for="Name" class="col-sm-3 control-label">Name*</label></h3>
+                    <div class="col-sm-9">
+                        <input type="text" id="name" name="name" placeholder="Name" class="form-control" autofocus required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h3 style="color:white;"><label for="phone" class="col-sm-3 control-label">Phone No.* </label></h3>
+                    <div class="col-sm-9">
+                        <input type="tel" id="phone" name="number" placeholder="Ex.1234567890" pattern="[0-9]{10}" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h3 style="color:white;"><label for="password" class="col-sm-3 control-label">Password*</label></h3>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" name="password" placeholder="Password" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h3 style="color:white;"><label for="password" class="col-sm-3 control-label">Confirm Password*</label></h3>
+                    <div class="col-sm-9">
+                        <input type="password" id="passwordp" placeholder="Password" class="form-control" required>
+                    </div>
+                </div>
+               
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <span class="help-block" style="color:white;">*Required fields</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 style="color:white;"><button type="submit" class="btn btn-primary" align="center" value="Submit Form" name="save" >Register</button></h3>
+                </div>
+            </form>
+        </div> 
+</center>
+</fieldset>
+</div>
+</body>
+</html>

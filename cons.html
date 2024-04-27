@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        * {
+          box-sizing: border-box;
+        }
+        input[type=text],
+        select,
+        textarea {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid #eeeeee;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 8px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        input[type=email],
+        select, 
+        textarea
+        {
+            width: 100%;
+          padding: 8px;
+          border: 1px solid #eeeeee;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 8px;
+          margin-bottom: 16px;
+          resize: vertical;
+
+        }
+        input[type=tel],
+        select, 
+        textarea
+        {
+            width: 100%;
+          padding: 8px;
+          border: 1px solid #eeeeee;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 8px;
+          margin-bottom: 16px;
+          resize: vertical;
+
+        }
+        input[type=submit] {
+          background-color: #4cd9c6;
+          color: #ffffff;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 7px;
+          cursor: pointer;
+        }
+        input[type=submit]:hover {
+          background-color: #6fe8d7;
+        }
+        .container {
+          border-radius: 8px;
+          background-color: #e6e6e6;
+          padding: 15px;
+        }
+      </style>
+    </head>
+    <body>
+      <h2 style="text-align: center;">Contact Form</h2>
+  
+<div class="container">
+<form name="frmContact" method="post" action="cons.php">
+   
+<label for="Name" style="text-align: center;">Name </label>
+<input type="text" maxlength="32" name="Name" id="txtName" pattern="[A-Za-za]{1,32}" placeholder="prachi">
+</p>
+<p>
+<label for="email">Email</label>
+<input type="email" name="Email" id="email" placeholder="tejaswini@gmail.com">
+</p>
+<p>
+<label for="phone">Phone</label>
+<input type="tel" name="phone" id="phone" placeholder ="1234567890" pattern="[0-9]{10}">
+</p>
+<p>
+<label for="message">Message</label>
+<textarea name="txtMessage" id="txtMessage"></textarea>
+</p>
+<p>&nbsp;</p>
+<p>
+<input type="submit" name="Submit" id="Submit" value="Submit">
+</p>
+</form>
+</div>
+
+</body>
+</html>
